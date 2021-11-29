@@ -23,6 +23,33 @@ table {
 .collapsed {
     display: none;
 }
+
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,13 +68,13 @@ $('thead').on('click', function(){
  <body  bgcolor="#f0f0f0">
  <table id="example0">
  <tr>
- <td  bgcolor=#c3c3c3 align=center><b><a href="about.html" target="right">About Me</a></b></td>
+ <td  bgcolor=#c3c3c3 align=left><b><a href="about.html" target="right">About Me</a></b></td>
  </tr>
  </table>
 
   <table id="example">
     <thead>
-        <tr><th>JAVA</th></tr>
+        <tr><th  align=left>JAVA</th></tr>
     </thead>    
 			<tbody class="collapsed">
 				<tr><td  align=center><a href="loops.html" target="right">For Loops</a></td></tr>
@@ -55,7 +82,7 @@ $('thead').on('click', function(){
 			</tbody>
     
     <thead>
-        <tr><th>ASP</th></tr>
+        <tr><th align=left>ASP</th></tr>
     </thead>    
 			<tbody class="collapsed">
 				<tr><td  align=center><a href="loops.html" target="right">Loops</a></td></tr>
@@ -63,7 +90,7 @@ $('thead').on('click', function(){
 			</tbody>
 
     <thead>
-        <tr><th>SoftWare Engineering</th></tr>
+        <tr><th align=left>SoftWare Engineering</th></tr>
     </thead>    
 			<tbody class="collapsed">
 				<tr><td  align=center><a href="SEPart1.html" target="right">Part1</a></td></tr>
@@ -71,11 +98,12 @@ $('thead').on('click', function(){
 			</tbody>
 			
      <thead>
-        <tr><th>Miscellaneous </th></tr>
+        <tr><th align=left>Miscellaneous </th></tr>
     </thead>    
 			<tbody class="collapsed">
 				<tr><td  align=center><a href="Misc_VB_Loop.html" target="right">VB Script Loops</a></td></tr>
-				<tr><td  align=center><a href="Misc_Anydesk.html" target="right">Connect Remote Desktop</a></td></tr>
+				<tr><td  align=center><a href="Misc_Anydesk.html" target="right">Connect Remote Desktop</a></td></tr>				
+							
 			</tbody>
     
 </table>
