@@ -6,19 +6,68 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+
+  <style>
+ td, th {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+th {cursor: pointer; background: #eee;}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.collapsed {
+    display: none;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('thead').on('click', function(){
+    $(this).next('tbody').toggleClass('collapsed');
+});
+}); 
+ 
+
+</script>
  </head>
 
- <body  bgcolor="#DAE9BC">
-  left
 
-  <a>
-  <ul>
-<li><a href="about.html" target="right">About the Company</a></li>
-<li><a href="company.html" target="right">Company Clients</a></li>
-<li><a href="company.html" target="right">Company Clients</a></li>
-<li><a href="ASP_Book.htm" target="right">asp</a></li>
-<li><a href="java_Book.htm" target="right">java</a></li>
-</ul>
-  </a>
+ <body  bgcolor="#f0f0f0">
+ <table id="example0">
+ <tr>
+ <td align=center><b><a href="about.html" target="right">About Me</a></b></td>
+ </tr>
+ </table>
+
+  <table id="example">
+    <thead>
+        <tr><th>JAVA</th></tr>
+    </thead>
+    
+    <tbody class="collapsed">
+        <tr><td  align=center><a href="loops.html" target="right">For Loops</a></td></tr>
+        <tr><td  align=center><a href="javaclass.html" target="right">Class and Objects</a></td></tr>
+    </tbody>
+    
+    <thead>
+        <tr><th>ASP</th></tr>
+    </thead>
+    
+    <tbody class="collapsed">
+        <tr><td  align=center><a href="loops.html" target="right">Loops</a></td></tr>
+        <tr><td  align=center><a href="loops.html" target="right">ADO</a></td></tr>
+    </tbody>
+    
+    
+    
+</table>
+
+
  </body>
 </html>
